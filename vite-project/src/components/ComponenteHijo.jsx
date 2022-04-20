@@ -8,7 +8,7 @@ const ComponenteHijo = ({}) => {
     return () => {
       console.log("destroy");
     };
-  }, [data]);
+  }, []);
 
   return (
     <div>
