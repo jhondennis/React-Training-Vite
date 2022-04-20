@@ -1,17 +1,14 @@
 import React from "react";
-import { actionGetItem } from "../store/actions";
 
 const ComponenteHijo = ({}) => {
   const [count, setCount] = React.useState(0);
-  const dispatch = useDispatch();
 
   React.useEffect(() => {
     console.log("render", count);
     return () => {
       console.log("destroy");
     };
-    dispatch(actionGetItem(data));
-  }, []);
+  }, [data]);
 
   return (
     <div>
