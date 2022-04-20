@@ -1,13 +1,22 @@
 import React from "react";
+import { actionGetItem } from "../store/actions";
 
-const ComponenteHijo = ({ valor, setCount }) => {
+const ComponenteHijo = ({}) => {
+  const [count, setCount] = React.useState(0);
+  const dispatch = useDispatch();
+
+  React.useEffect(() => {
+    console.log("render", count);
+    return () => {
+      console.log("destroy");
+    };
+    dispatch(actionGetItem(data));
+  }, []);
+
   return (
     <div>
-      El valor es: {valor}
-      <button onClick={() => setCount((prev) => prev + 1)}>
-        {" "}
-        dentro del hijo
-      </button>
+      <div>El valor es: {count}</div>
+      <button onClick={() => setCount(count + 1)}>dentro del hijo</button>
     </div>
   );
 };
