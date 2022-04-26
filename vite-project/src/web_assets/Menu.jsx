@@ -1,17 +1,20 @@
 import React from "react";
 
-import Container from "@mui/material/Container"
+import Container from "@mui/material/Container";
 // import Button from "@mui/material/Button";
 // import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Grid";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
-    <Grid container 
-      spacing={2}
-    >
-        <Grid item xs={4}>Logo</Grid>
-        <Grid item xs={8}>Menu</Grid>
+    <Grid container spacing={2} justifyContent="space-between">
+      <Grid item xs={2}>
+        <Link to="/">Home</Link>
+      </Grid>
+      <Grid item xs={2}>
+        <Link to="/about-us">About</Link>
+      </Grid>
     </Grid>
   );
 };
